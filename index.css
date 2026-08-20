@@ -8,7 +8,7 @@
 
 /* ── CSS Custom Properties (Design Tokens) ───────────── */
 :root {
-  /* ─ Surface Colors ─ */
+  /* ─ Surface Colors (Dark Default) ─ */
   --surface:                 #101418;
   --surface-dim:             #101418;
   --surface-bright:          #363a3e;
@@ -38,7 +38,7 @@
   --secondary-container:     #00515b;
   --on-secondary-container:  #84c2cd;
 
-  /* ─ Tertiary (Terracotta) ─ */
+  /* ─ Tertiary ─ */
   --tertiary:                #ffffff;
   --tertiary-container:      #ffdbcc;
   --on-tertiary-container:   #a64812;
@@ -47,9 +47,14 @@
   --error:                   #ffb4ab;
   --error-container:         #93000a;
 
-  /* ─ Outline ─ */
+  /* ─ Outline & Borders ─ */
   --outline:                 #8e9192;
   --outline-variant:         #444748;
+  --border-subtle:           rgba(255, 255, 255, 0.1);
+  --card-shadow:             0 20px 60px rgba(0, 0, 0, 0.4);
+  --navbar-bg:               rgba(16, 20, 24, 0.8);
+  --navbar-scrolled:         rgba(16, 20, 24, 0.95);
+  --mobile-menu-bg:          rgba(16, 20, 24, 0.98);
 
   /* ─ Inverse ─ */
   --inverse-surface:         #e0e3e8;
@@ -73,6 +78,57 @@
   --radius-lg:               0.5rem;
   --radius-xl:               0.75rem;
   --radius-full:             9999px;
+}
+
+/* ── Light Theme Overrides ───────────────────────────── */
+[data-theme="light"] {
+  /* ─ Surface Colors ─ */
+  --surface:                 #f8f9fa;
+  --surface-dim:             #edf0f3;
+  --surface-bright:          #ffffff;
+  --surface-container-lowest:#ffffff;
+  --surface-container-low:   #f1f4f7;
+  --surface-container:       #e8ecf1;
+  --surface-container-high:  #dfe4eb;
+  --surface-container-highest:#d5dce5;
+  --surface-elevated:        #ffffff;
+  --surface-variant:         #e2e7ee;
+
+  /* ─ On-Surface Colors ─ */
+  --on-surface:              #171d22;
+  --on-surface-variant:      #41484e;
+  --on-background:           #171d22;
+  --text-muted:              #64748b;
+
+  /* ─ Primary ─ */
+  --primary:                 #0f172a;
+  --on-primary:              #ffffff;
+  --primary-container:       #1e293b;
+  --on-primary-container:    #f8fafc;
+
+  /* ─ Secondary (Teal/Ocean) ─ */
+  --secondary:               #006d77;
+  --on-secondary:            #ffffff;
+  --secondary-container:     #e0f2fe;
+  --on-secondary-container:  #0284c7;
+
+  /* ─ Tertiary ─ */
+  --tertiary:                #0f172a;
+  --tertiary-container:      #ffedd5;
+  --on-tertiary-container:   #9a3412;
+
+  /* ─ Outline & Borders ─ */
+  --outline:                 #94a3b8;
+  --outline-variant:         #cbd5e1;
+  --border-subtle:           rgba(0, 0, 0, 0.08);
+  --card-shadow:             0 12px 32px rgba(15, 23, 42, 0.08);
+  --navbar-bg:               rgba(248, 249, 250, 0.85);
+  --navbar-scrolled:         rgba(248, 249, 250, 0.98);
+  --mobile-menu-bg:          rgba(248, 249, 250, 0.98);
+
+  /* ─ Inverse ─ */
+  --inverse-surface:         #171d22;
+  --inverse-on-surface:      #f1f4f7;
 }
 
 /* ── Base Reset & Body ───────────────────────────────── */
@@ -199,15 +255,15 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(16, 20, 24, 0.8);
+  background: var(--navbar-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(16, 20, 24, 0.95);
-  box-shadow: 0 1px 0 rgba(68, 71, 72, 0.3);
+  background: var(--navbar-scrolled);
+  box-shadow: 0 1px 0 var(--border-subtle);
 }
 
 .navbar__inner {
@@ -286,6 +342,38 @@ ul, ol { list-style: none; }
   border-radius: 50%;
 }
 
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--surface-container);
+  border: 1px solid var(--border-subtle);
+  color: var(--primary);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+  background: var(--surface-variant);
+}
+
+.theme-toggle__icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
 .navbar__cta {
   display: none;
   background: var(--primary);
@@ -335,7 +423,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(16, 20, 24, 0.98);
+  background: var(--mobile-menu-bg);
   backdrop-filter: blur(20px);
   z-index: 100;
   display: flex;
@@ -446,7 +534,7 @@ ul, ol { list-style: none; }
   background: var(--surface-elevated);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-subtle);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   text-decoration: none;
@@ -455,7 +543,7 @@ ul, ol { list-style: none; }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--card-shadow);
 }
 
 .project-card__image-wrapper {
@@ -557,8 +645,8 @@ ul, ol { list-style: none; }
   height: 320px;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   transform: rotate(-3deg);
   transition: transform 0.5s ease;
 }
@@ -837,7 +925,7 @@ ul, ol { list-style: none; }
 .case-overview__hero-image {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-subtle);
   height: 400px;
   background-size: cover;
   background-position: center;
@@ -901,7 +989,7 @@ ul, ol { list-style: none; }
   grid-column: span 1;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-subtle);
   background-size: cover;
   background-position: center;
   min-height: 300px;
@@ -932,7 +1020,7 @@ ul, ol { list-style: none; }
   padding: 24px;
   background: var(--surface-container);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
   text-align: center;
 }
 

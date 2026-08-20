@@ -2,7 +2,43 @@
    MINIMALIST PORTFOLIO — JavaScript Interactions
    ====================================================== */
 
+// ── Theme Initialization (Run immediately before DOM load to avoid flash) ──
+(function() {
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+  // ── Theme Switcher ───────────────────────────────────
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+  
+  const updateThemeUI = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+
+    themeToggleBtns.forEach(btn => {
+      const icon = btn.querySelector('.theme-toggle__icon');
+      if (icon) {
+        // In dark mode show sun icon (light_mode) to switch to light, in light mode show moon icon (dark_mode)
+        icon.textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+      }
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  };
+
+  // Set initial icon based on current theme
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  updateThemeUI(currentTheme);
+
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+      updateThemeUI(newTheme);
+    });
+  });
+
   // ── Navbar Scroll Effect ─────────────────────────────
   const navbar = document.querySelector('.navbar');
   if (navbar) {
