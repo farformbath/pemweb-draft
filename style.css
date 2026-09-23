@@ -3,9 +3,6 @@
    Based on Stitch "Architectural Minimalist" design
    ====================================================== */
 
-/* ── Google Fonts ────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&display=swap');
-
 /* ── CSS Custom Properties (Design Tokens) ───────────── */
 :root {
   /* ─ Surface Colors (Dark Default) ─ */
@@ -98,7 +95,7 @@
   --on-surface:              #171d22;
   --on-surface-variant:      #41484e;
   --on-background:           #171d22;
-  --text-muted:              #64748b;
+  --text-muted:              #475569;
 
   /* ─ Primary ─ */
   --primary:                 #0f172a;
@@ -140,6 +137,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1139,20 +1137,35 @@ ul, ol { list-style: none; }
 /* ── Responsive Typography Overrides ─────────────────── */
 @media (min-width: 768px) {
   .hero__title {
-    font-size: 84px;
-    line-height: 84px;
+    font-size: clamp(3rem, 6.5vw, 5.25rem);
+    line-height: 1.05;
     letter-spacing: -0.04em;
   }
 
   .case-hero__title {
-    font-size: 84px;
-    line-height: 84px;
+    font-size: clamp(3rem, 6.5vw, 5.25rem);
+    line-height: 1.05;
     letter-spacing: -0.04em;
   }
 
   .connect__title {
-    font-size: 84px;
-    line-height: 84px;
+    font-size: clamp(3rem, 6.5vw, 5.25rem);
+    line-height: 1.05;
     letter-spacing: -0.04em;
   }
 }
+
+/* ── Accessibility: Reduced Motion ────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
