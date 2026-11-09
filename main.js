@@ -1,15 +1,12 @@
-/* ======================================================
-   MINIMALIST PORTFOLIO — JavaScript Interactions
-   ====================================================== */
 
-// ── Theme Initialization (Run immediately before DOM load to avoid flash) ──
+// Tema awal
 (function() {
   const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ── Theme Switcher ───────────────────────────────────
+  // Theme Switcher
   const themeToggleBtns = document.querySelectorAll('.theme-toggle');
   
   const updateThemeUI = (theme) => {
@@ -37,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Navbar Scroll Effect ─────────────────────────────
+  // Navbar Scroll Effect
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     let ticking = false;
@@ -52,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // ── Mobile Menu Toggle & Keyboard Accessibility ──────
+  // Mobile Menu Toggle & Keyboard Accessibility
   const mobileToggle = document.querySelector('.navbar__mobile-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileClose = document.querySelector('.mobile-menu__close');
@@ -83,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Scroll Reveal (Intersection Observer) ────────────
+  // Scroll Reveal (Intersection Observer)
   const revealElements = document.querySelectorAll('.reveal');
   if (revealElements.length > 0) {
     const revealObserver = new IntersectionObserver((entries) => {
@@ -101,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
   }
 
-  // ── Active Nav Link Highlighting (Intersection Observer) ─
+  // Active Nav Link Highlighting (Intersection Observer)
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.navbar__link');
 

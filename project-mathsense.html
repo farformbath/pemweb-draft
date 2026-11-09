@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MathSense-ID — Symbolic AI &amp; Knowledge Graph | Irfan Fatkhurrizal</title>
+  <meta name="description" content="MathSense-ID — Sistem penalaran otomatis pemecahan soal cerita matematika bahasa Indonesia (MWP) menggunakan Rule-based NER, Graf Pengetahuan, dan Symbolic Solver."/>
+  <link rel="icon" type="image/jpeg" href="favicon.jpg"/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="MathSense-ID — Symbolic AI &amp; Knowledge Graph | Irfan Fatkhurrizal"/>
+  <meta property="og:description" content="100% Akurasi Benchmark — Pemecahan Soal Cerita Matematika Bahasa Indonesia Berbasis Graf Pengetahuan dan Aljabar Simbolik."/>
+  <meta property="og:image" content="mathsense-banner.png"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__logo" href="index.html">Irfan Fatkhurrizal</a>
+      <div class="navbar__links">
+        <a class="navbar__link" href="index.html">Home</a>
+        <a class="navbar__link active" href="index.html#projects">Projects</a>
+        <a class="navbar__link" href="index.html#experience">Experience</a>
+        <a class="navbar__link" href="index.html#about">About</a>
+      </div>
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="material-symbols-outlined theme-toggle__icon">light_mode</span>
+        </button>
+        <a class="navbar__cta" href="index.html#contact">Let's Connect</a>
+        <button class="navbar__mobile-toggle" aria-label="Open menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a class="mobile-menu__link" href="index.html">Home</a>
+    <a class="mobile-menu__link" href="index.html#projects">Projects</a>
+    <a class="mobile-menu__link" href="index.html#experience">Experience</a>
+    <a class="mobile-menu__link" href="index.html#about">About</a>
+    <div style="margin-top: 16px;">
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <span class="material-symbols-outlined theme-toggle__icon">light_mode</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Case Study Hero -->
+    <section class="case-hero container">
+      <a class="back-link reveal" href="index.html#projects">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back to Projects
+      </a>
+      <span class="case-hero__category text-label-caps reveal">Symbolic AI &amp; NLP — DIMAS-TI 2026 Research Paper</span>
+      <h1 class="case-hero__title text-display-lg-mobile reveal reveal-delay-1">MathSense-ID.</h1>
+      <p class="case-hero__subtitle text-body-lg reveal reveal-delay-2">
+        Sistem penalaran simbolik terotomasi untuk menyelesaikan Soal Cerita Matematika (*Math Word Problems*) berbahasa Indonesia dengan akurasi 100% pada benchmark test set melalui integrasi Rule-based NER, Graf Pengetahuan, dan Equation Builder deterministik.
+      </p>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="case-overview container">
+      <div class="case-overview__grid">
+        <div class="reveal">
+          <h2 class="case-overview__meta-title text-headline-md">Overview</h2>
+          <ul class="case-overview__meta-list">
+            <li class="case-overview__meta-item">
+              <span class="case-overview__meta-label text-mono-label">Role</span>
+              <span class="case-overview__meta-value text-body-md">Lead AI Researcher &amp; Core Engine Developer</span>
+            </li>
+            <li class="case-overview__meta-item">
+              <span class="case-overview__meta-label text-mono-label">Timeline</span>
+              <span class="case-overview__meta-value text-body-md">Sep 2026 — Oct 2026</span>
+            </li>
+            <li class="case-overview__meta-item">
+              <span class="case-overview__meta-label text-mono-label">Publikasi</span>
+              <span class="case-overview__meta-value text-body-md">Makalah 10 Halaman Format DIMAS-TI 2026</span>
+            </li>
+            <li class="case-overview__meta-item">
+              <span class="case-overview__meta-label text-mono-label">Benchmark Result</span>
+              <span class="case-overview__meta-value text-body-md">100% Test Set &amp; 100% OOD (95/95 Pytest Passed)</span>
+            </li>
+            <li class="case-overview__meta-item">
+              <span class="case-overview__meta-label text-mono-label">Tech Stack</span>
+              <span class="case-overview__meta-value text-body-md">Python 3.12, Rule-Based NER, Knowledge Graph (NetworkX), SymPy, Pytest</span>
+            </li>
+          </ul>
+          <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
+            <a class="btn btn--primary" href="https://github.com/farformbath" target="_blank" rel="noopener noreferrer" style="padding: 12px 24px; font-size: 14px;">
+              <span class="material-symbols-outlined" style="font-size: 18px; margin-right: 6px;">description</span>
+              View Paper &amp; Architecture
+            </a>
+            <a class="btn btn--outline" href="index.html#contact" style="padding: 12px 24px; font-size: 14px;">
+              Discuss Project
+            </a>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="case-overview__hero-image" style="background-image: url('mathsense-banner.png'); background-position: center;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem & Context -->
+    <section class="case-section container">
+      <div class="case-section__grid">
+        <div class="case-section__content reveal">
+          <h2 class="case-section__title text-headline-md">The Problem</h2>
+          <p class="case-section__text text-body-lg">
+            Large Language Models (LLM) seperti GPT atau LLaMA sering mengalami <em>arithmetic hallucination</em> saat memproses soal cerita matematika dalam bahasa Indonesia, khususnya ketika dihadapkan pada hubungan relasi proporsi antar entitas, satuan rupiah titik (contoh: <code>Rp. 15.000</code>), atau kalimat bertingkat.
+          </p>
+          <p class="case-section__text text-body-lg">
+            Sistem membutuhkan penalaran neuro-simbolik deterministik yang dapat mengekstrak fakta secara tepat tanpa probabilistik halusinasi, memetakan hubungan antar variabel secara eksplisit, dan menyelesaikan persamaan aljabar secara presisi.
+          </p>
+        </div>
+        <div class="case-section__image reveal reveal-delay-1" style="background-image: url('mathsense-banner.png');">
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="case-section container">
+      <div class="case-section__grid">
+        <div class="case-section__content case-section__content--wide reveal">
+          <h2 class="case-section__title text-headline-md">Four-Stage Neuro-Symbolic Pipeline</h2>
+          <p class="case-section__text text-body-lg">
+            MathSense-ID menyelesaikan soal cerita melalui 4 tahap terisolasi dan dapat diverifikasi:
+          </p>
+          <ul style="list-style-type: disc; padding-left: 24px; margin-top: 12px; display: flex; flex-direction: column; gap: 12px; color: var(--on-surface-variant); font-size: 17px; line-height: 1.6;">
+            <li><strong>Tahap 1 — Rule-based NER &amp; Robust Number Parser:</strong> Mendeteksi angka desimal, persentase, fraksi, mata uang, dan entitas subjek tanpa terpengaruh ambiguitas tanda baca.</li>
+            <li><strong>Tahap 2 — Relation Extraction:</strong> Mengidentifikasi peran relasional matematis (penambahan, pengurangan, perbandingan, proporsi, pembagian bersisa).</li>
+            <li><strong>Tahap 3 — Knowledge Graph (KG) Construction:</strong> Memetakan entitas dan kuantitas ke dalam graf relasi formal terstruktur menggunakan NetworkX untuk menjaga konsistensi state.</li>
+            <li><strong>Tahap 4 — Equation Builder &amp; SymPy Solver:</strong> Menerjemahkan subgraf menjadi persamaan simbolik matematis dan mengeksekusi penyelesaian eksak tanpa pembulatan prematur.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="case-section container">
+      <div class="reveal">
+        <h2 class="case-section__title text-headline-md" style="text-align: center;">Proven Results &amp; Verification</h2>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric__value" style="font-size: 32px; color: #10b981;">100%</span>
+            <span class="metric__label text-mono-label">Test Set Benchmark</span>
+            <span class="text-body-md" style="color: var(--text-muted); margin-top: 8px;">Akurasi sempurna pada seluruh ragam soal cerita matematika</span>
+          </div>
+          <div class="metric">
+            <span class="metric__value" style="font-size: 32px; color: #10b981;">95 / 95</span>
+            <span class="metric__label text-mono-label">Pytest Test Suite</span>
+            <span class="text-body-md" style="color: var(--text-muted); margin-top: 8px;">Pengujian unit &amp; regresi komprehensif zero failure</span>
+          </div>
+          <div class="metric">
+            <span class="metric__value" style="font-size: 32px; color: var(--secondary);">0%</span>
+            <span class="metric__label text-mono-label">Arithmetic Hallucination</span>
+            <span class="text-body-md" style="color: var(--text-muted); margin-top: 8px;">Deterministik murni berbasis graf aljabar simbolik</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <section class="container" style="padding-bottom: 80px; text-align: center;">
+      <a class="btn btn--outline" href="index.html#projects">
+        <span class="material-symbols-outlined" style="font-size: 18px; margin-right: 6px;">arrow_back</span>
+        Back to All Projects
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">Irfan Fatkhurrizal</div>
+      <div class="footer__social">
+        <a class="footer__social-link" href="https://www.linkedin.com/in/irfan-fatkhurrizal-444149339/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="footer__social-link" href="https://github.com/farformbath" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="footer__social-link" href="mailto:irfaannnnr@gmail.com">Email</a>
+      </div>
+      <div class="footer__copyright text-mono-label">
+        © 2026 Irfan Fatkhurrizal. Semarang, Indonesia.
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
