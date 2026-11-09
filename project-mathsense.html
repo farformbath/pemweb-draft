@@ -102,12 +102,16 @@
             </li>
           </ul>
           <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
-            <a class="btn btn--primary" href="https://github.com/farformbath" target="_blank" rel="noopener noreferrer" style="padding: 12px 24px; font-size: 14px;">
-              <span class="material-symbols-outlined" style="font-size: 18px; margin-right: 6px;">description</span>
-              View Paper &amp; Architecture
+            <a class="btn btn--primary" href="https://mathsense-id-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" style="padding: 12px 24px; font-size: 14px;">
+              <span class="material-symbols-outlined" style="font-size: 18px; margin-right: 6px;">rocket_launch</span>
+              Launch Streamlit App
+            </a>
+            <a class="btn btn--outline" href="https://github.com/farformbath/mathsense-id-dashboard" target="_blank" rel="noopener noreferrer" style="padding: 12px 24px; font-size: 14px;">
+              <span class="material-symbols-outlined" style="font-size: 18px; margin-right: 6px;">code</span>
+              GitHub Repository
             </a>
             <a class="btn btn--outline" href="index.html#contact" style="padding: 12px 24px; font-size: 14px;">
-              Discuss Project
+              Contact Researcher
             </a>
           </div>
         </div>
@@ -148,6 +152,35 @@
             <li><strong>Tahap 3 — Knowledge Graph (KG) Construction:</strong> Memetakan entitas dan kuantitas ke dalam graf relasi formal terstruktur menggunakan NetworkX untuk menjaga konsistensi state.</li>
             <li><strong>Tahap 4 — Equation Builder &amp; SymPy Solver:</strong> Menerjemahkan subgraf menjadi persamaan simbolik matematis dan mengeksekusi penyelesaian eksak tanpa pembulatan prematur.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Streamlit Dashboard Showcase -->
+    <section class="case-section container">
+      <div class="case-section__grid">
+        <div class="case-section__content case-section__content--wide reveal">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 12px;">
+            <h2 class="case-section__title text-headline-md" style="margin-bottom: 0;">Interactive Streamlit Dashboard</h2>
+            <span class="live-badge" style="margin-left: 0;"><span class="live-badge__dot"></span> Streamlit Ready (Port 8501)</span>
+          </div>
+          <p class="case-section__text text-body-lg">
+            Untuk menguji penalaran sistem pemecahan soal cerita matematika ini secara langsung, telah dibangun aplikasi dashboard <strong>Streamlit</strong> interaktif mandiri di <code>C:\projects\mathsense-id-dashboard</code>.
+          </p>
+          <div style="background: var(--surface-container); border: 1px solid var(--outline-variant); border-radius: 12px; padding: 24px; margin-top: 16px;">
+            <h3 class="text-headline-sm" style="color: var(--primary); margin-bottom: 12px;">Fitur Dashboard:</h3>
+            <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.7; color: var(--on-surface-variant); font-size: 15px;">
+              <li><strong>Live Problem Solver:</strong> Masukkan soal cerita matematika bahasa Indonesia bebas dan lihat breakdown 4 tahap inferensi secara transparan.</li>
+              <li><strong>Visualisasi Graf Pengetahuan (NetworkX &amp; Plotly):</strong> Menampilkan simpul entitas dan relasi operasi matematis secara interaktif.</li>
+              <li><strong>Benchmark &amp; Evaluasi Kuantitatif:</strong> Hasil evaluasi 100% akurasi test set dan tabel perbandingan keunggulan Neuro-Simbolik vs LLM probabilistik.</li>
+              <li><strong>Dataset Explorer:</strong> Eksplorasi 500+ bank soal cerita dengan pencarian kata kunci dan tombol ekspor data CSV.</li>
+            </ul>
+            <div style="margin-top: 18px; padding: 14px 18px; background: rgba(0,0,0,0.3); border-radius: 8px; font-family: monospace; font-size: 13px; color: #38bdf8;">
+              # Perintah menjalankan dashboard:<br/>
+              cd C:\projects\mathsense-id-dashboard<br/>
+              python -m streamlit run app.py
+            </div>
+          </div>
         </div>
       </div>
     </section>
