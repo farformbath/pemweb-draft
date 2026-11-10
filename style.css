@@ -590,6 +590,7 @@ ul, ol { list-style: none; }
   display: flex;
   flex-direction: column;
   background: var(--surface-elevated);
+  text-align: left;
 }
 
 .project-card__content > div {
@@ -597,6 +598,13 @@ ul, ol { list-style: none; }
   flex-direction: column;
   flex: 1 1 auto;
   height: 100%;
+  text-align: left;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.project-card__content [style*="justify-content: space-between"] {
+  width: 100%;
 }
 
 .project-card__category {
@@ -1218,6 +1226,7 @@ ul, ol { list-style: none; }
   margin-top: auto;
   padding-top: 20px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .btn--sm {
