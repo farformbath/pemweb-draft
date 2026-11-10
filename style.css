@@ -512,7 +512,7 @@ ul, ol { list-style: none; }
 @media (min-width: 768px) {
   .case-studies__grid {
     grid-template-columns: repeat(12, 1fr);
-    row-gap: 64px;
+    row-gap: 48px;
     column-gap: 32px;
   }
 }
@@ -532,6 +532,7 @@ ul, ol { list-style: none; }
 .project-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   background: var(--surface-elevated);
   border-radius: 12px;
   overflow: hidden;
@@ -541,7 +542,6 @@ ul, ol { list-style: none; }
   text-decoration: none;
   color: inherit;
 }
-
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--card-shadow);
@@ -586,11 +586,17 @@ ul, ol { list-style: none; }
 
 .project-card__content {
   padding: 30px 28px;
-  flex-grow: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background: var(--surface-elevated);
+}
+
+.project-card__content > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
 }
 
 .project-card__category {
@@ -1177,13 +1183,11 @@ ul, ol { list-style: none; }
 /* ── Additional Project Helpers ─────────────────────── */
 .card--span-12 { 
   grid-column: span 1; 
-  margin-top: 16px;
 }
 
 @media (min-width: 768px) {
   .card--span-12 { 
     grid-column: span 12; 
-    margin-top: 24px;
   }
 }
 .project-tags {
@@ -1211,7 +1215,8 @@ ul, ol { list-style: none; }
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: auto;
+  padding-top: 20px;
   flex-wrap: wrap;
 }
 
