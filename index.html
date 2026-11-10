@@ -102,7 +102,7 @@
                 <a href="project-pusatkost.html" style="color: inherit; text-decoration: none;">PusatKost UNNES — Integrated Housing Platform</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Platform ekosistem pencarian dan kelola hunian kos mahasiswa di sekitar Universitas Negeri Semarang (UNNES), didukung asisten cerdas <strong>NESA AI</strong> (tool-calling &lt; 2s), filter interaktif, dan dark mode.
+                Mengembangkan platform pencarian dan kelola hunian kos mahasiswa di sekitar UNNES dari nol menggunakan Laravel, React (Inertia.js), dan Nginx SSL. Mengintegrasikan asisten cerdas virtual NESA dengan kemampuan AI tool-calling ke database untuk menghasilkan rekomendasi kos dalam latensi &lt; 2 detik.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Laravel</span>
@@ -140,7 +140,7 @@
                 <a href="project-pecknrun.html" style="color: inherit; text-decoration: none;">PecknRun</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Fokus peran sebagai <strong>Backend Developer &amp; AI Engineer</strong>: Merancang arsitektur database &amp; controller Laravel, serta membangun integrasi <strong>AI microservice (FastAPI &amp; RAG)</strong> untuk asisten operasional merchant.
+                Merancang arsitektur backend, skema database, dan controller Laravel 13, serta membangun microservice AI internal berbasis Python FastAPI dan RAG (Retrieval-Augmented Generation). Menghubungkan asisten operasional ke gateway LLM untuk mengecek inventaris, transaksi penjualan, dan rujukan SOP merchant secara real-time.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Laravel</span>
@@ -178,7 +178,7 @@
                 <a href="project-revisimudah.html" style="color: inherit; text-decoration: none;">Revisi Mudah — Audio-to-Academic Planning System</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Sistem AI pengubah rekaman audio bimbingan akademik menjadi transkrip bertimestamp milidetik, ekstraksi arahan dosen berbasis bukti kutipan verbatim, dan rencana aksi revisi terverifikasi via Typer CLI &amp; MCP Server.
+                Membangun sistem perencanaan revisi akademik dari rekaman audio bimbingan menggunakan Faster-Whisper, Gemini multimodal, Typer CLI, dan server Model Context Protocol (MCP). Menerapkan verifikasi bukti kutipan verbatim bertimestamp dan batas izin privasi ketat (Zero Silent Cloud Uploads) untuk menghasilkan rencana revisi terstruktur.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Faster-Whisper</span>
@@ -216,7 +216,7 @@
                 <a href="project-mathsense.html" style="color: inherit; text-decoration: none;">MathSense-ID</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Sistem penalaran neuro-simbolik otomatis untuk pemecahan soal cerita matematika bahasa Indonesia berbasis Rule-based NER, Graf Pengetahuan, dan SymPy Equation Solver (95/95 test lolos).
+                Merancang dan mengimplementasikan pipeline penalaran neuro-simbolik untuk menyelesaikan soal cerita matematika bahasa Indonesia menggunakan Rule-Based NER, Graf Pengetahuan (NetworkX), dan SymPy. Berhasil mengeliminasi halusinasi aritmatika pada variasi nilai rupiah dan desimal dengan 95/95 rangkaian pengujian unit Pytest lolos.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Python</span>
@@ -252,13 +252,13 @@
             <div>
               <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
                 <span class="project-card__category text-label-caps" style="margin-bottom: 0;">Data Mining &amp; Machine Learning</span>
-                <span style="font-size: 11px; font-weight: 600; color: var(--secondary);">IEEE Paper</span>
+                <span class="live-badge"><span class="live-badge__dot"></span> Live Demo</span>
               </div>
               <h3 class="project-card__title text-headline-sm">
                 <a href="project-kai-reviewbombing.html" style="color: inherit; text-decoration: none;">Deteksi Review Bombing &amp; Anomali Multi-View KAI Access</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Riset analisis penambangan data multi-view pada 15.000+ ulasan Google Play Store. Mengintegrasikan proses stokastik Goh-Barabási untuk temporal burstiness, leksikon fungsional transportasi KA, dan graf modularitas Louvain.
+                Menganalisis 15.000+ data ulasan Google Play Store untuk mendeteksi serangan review bombing terkoordinasi menggunakan pemodelan proses stokastik Goh-Barabási (burstiness B), leksikon teknis transportasi KA, dan graf modularitas Louvain. Membangun dashboard visualisasi Streamlit interaktif untuk memetakan ulasan ke dalam 4 kuadran perilaku.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Python</span>
@@ -270,7 +270,11 @@
               <div class="project-actions">
                 <a href="project-kai-reviewbombing.html" class="btn btn--outline btn--sm">
                   <span class="material-symbols-outlined" style="font-size: 16px; margin-right: 4px;">article</span>
-                  Case Study &amp; Paper
+                  Case Study
+                </a>
+                <a href="https://kai-reviewbombing-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn--live btn--sm">
+                  <span class="material-symbols-outlined" style="font-size: 16px; margin-right: 4px;">rocket_launch</span>
+                  Live Demo
                 </a>
                 <a href="https://github.com/farformbath/kai-reviewbombing-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
                   <span class="material-symbols-outlined" style="font-size: 16px; margin-right: 4px;">code</span>
@@ -287,13 +291,15 @@
             <div class="project-card__image" style="background-image: url('warasin.png')"></div>
           </a>
           <div class="project-card__content">
-            <div>
-              <span class="project-card__category text-label-caps">Data Science &amp; Multimodal ML</span>
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
+                <span class="project-card__category text-label-caps" style="margin-bottom: 0;">Data Science &amp; Multimodal ML</span>
+                <span class="live-badge"><span class="live-badge__dot"></span> Live Demo</span>
+              </div>
               <h3 class="project-card__title text-headline-sm">
                 <a href="project-warasin.html" style="color: inherit; text-decoration: none;">Warasin — Because Your Mind Matters</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Fokus peran sebagai <strong>Data Scientist</strong>: Melakukan eksplorasi data, feature engineering kuesioner Sleep Health &amp; Lifestyle, serta perancangan model klasifikasi tingkat stres multimodal.
+                Melakukan data cleaning, feature engineering, dan analisis multivariat pada kuesioner Sleep Health &amp; Lifestyle survey menggunakan Pandas, Plotly, dan Streamlit. Membangun visualisasi dashboard interaktif untuk memetakan korelasi pola tidur terhadap klasifikasi tingkat stres pengguna.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Data Science</span>
@@ -305,6 +311,14 @@
                 <a href="project-warasin.html" class="btn btn--outline btn--sm">
                   <span class="material-symbols-outlined" style="font-size: 16px; margin-right: 4px;">article</span>
                   Case Study
+                </a>
+                <a href="https://warasin-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn--live btn--sm">
+                  <span class="material-symbols-outlined" style="font-size: 16px; margin-right: 4px;">rocket_launch</span>
+                  Streamlit App
+                </a>
+                <a href="https://warasin.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                  <span class="material-symbols-outlined" style="font-size: 16px; margin-right: 4px;">open_in_new</span>
+                  Web App
                 </a>
               </div>
             </div>
@@ -323,7 +337,7 @@
                 <a href="project-reviewbps.html" style="color: inherit; text-decoration: none;">ReviewBPS &amp; BPS Data Automation</a>
               </h3>
               <p class="project-card__desc text-body-md">
-                Sistem evaluasi kinerja pegawai berbasis web untuk BPS serta pipeline automasi pemrosesan dan pelaporan data statistik survei menggunakan Python.
+                Membangun aplikasi evaluasi kinerja pegawai berbasis Node.js, Express, dan Turso SQLite, serta menulis skrip automasi pemrosesan data survei statistik menggunakan Python Pandas. Berhasil mendigitalisasi rekapitulasi penilaian pegawai dan mempercepat validasi data statistik di BPS Kabupaten Purworejo.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Node.js</span>
