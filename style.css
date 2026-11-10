@@ -505,12 +505,15 @@ ul, ol { list-style: none; }
 .case-studies__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  row-gap: 48px;
+  column-gap: 32px;
 }
 
 @media (min-width: 768px) {
   .case-studies__grid {
     grid-template-columns: repeat(12, 1fr);
+    row-gap: 64px;
+    column-gap: 32px;
   }
 }
 
@@ -1172,12 +1175,17 @@ ul, ol { list-style: none; }
 }
 
 /* ── Additional Project Helpers ─────────────────────── */
-.card--span-12 { grid-column: span 1; }
-
-@media (min-width: 768px) {
-  .card--span-12 { grid-column: span 12; }
+.card--span-12 { 
+  grid-column: span 1; 
+  margin-top: 16px;
 }
 
+@media (min-width: 768px) {
+  .card--span-12 { 
+    grid-column: span 12; 
+    margin-top: 24px;
+  }
+}
 .project-tags {
   display: flex;
   flex-wrap: wrap;
